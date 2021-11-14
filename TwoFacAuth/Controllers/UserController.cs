@@ -70,7 +70,7 @@ namespace TwoFacAuth.Controllers
                     {
                         serviceResponse.Message = "ENABLE_TWO_FACTOR";
                     }
-                    if (!result.Succeeded)
+                    if (!result.RequiresTwoFactor && !result.Succeeded)
                     {
                         serviceResponse.Message = "User or Password Mismatch Found!";
                     }
